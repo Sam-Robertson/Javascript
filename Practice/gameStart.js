@@ -3,8 +3,8 @@
  */
 
 
-
-document.getElementById("Main").style.textAlign = "center";
+//
+// document.getElementById("Main").style.textAlign = "center";
 
 var game = function () {
     this.gameStart = function (myid) {

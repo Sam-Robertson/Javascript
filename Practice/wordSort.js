@@ -16,3 +16,25 @@ function start() {
     document.getElementById("sevenLetter").innerHTML = mixedWord[6];
 
 }
+
+
+
+function asyncCapatalize (stringArray, callback) {
+    setTimeout(Capitalize, 3000);
+
+    function Capitalize() {
+        for (var stringIndex = 0; stringIndex < stringArray.length; stringIndex++) {
+            stringArray[stringIndex] = stringArray[stringIndex][0].toUpperCase() + stringArray[stringIndex].substr(1);
+        }
+        callback();
+    }
+}
+
+var puppies = ['cuddles ', 'daisy ', 'battleaxe ', 'bonecrusher '];
+
+asyncCapatalize(puppies, function () {
+    document.getElementById('puppy-names').innerText = puppies;
+});
+
+document.getElementById('puppy-names').innerText= puppies;
+
